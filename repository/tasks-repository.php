@@ -100,7 +100,7 @@ class TasksRepository {
 
     private function getConnection(): PDO
     {
-        $databaseConfig = require_once __DIR__ . '/../config/database.php';
+        $databaseConfig = require __DIR__ . '/../config/database.php';
         $connectionString = sprintf("mysql:dbname=%s;port=3306;host=%s", $databaseConfig['db'], $databaseConfig['host']);
 
         try {
